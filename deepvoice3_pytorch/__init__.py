@@ -124,3 +124,4 @@ class AttentionSeq2Seq(nn.Module):
             speaker_embed=speaker_embed, lengths=input_lengths)
 
         return mel_outputs, alignments, done, decoder_states
+

@@ -12,6 +12,10 @@ data
 datasets
 testout
 
+.vscode/
+ven/
+venv/
+
 # Created by https://www.gitignore.io
 
 ### Python ###
