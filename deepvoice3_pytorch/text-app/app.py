@@ -8,7 +8,7 @@ from deepvoice3_pytorch import frontend
 
 preset = "20180505_deepvoice3_ljspeech.json"
 checkpoint_path = "20180505_deepvoice3_checkpoint_step000640000.pth"
-text = "test test test"
+# text = "test test test"
 
 # Load parameters from preset
 with open(preset) as f:
@@ -25,8 +25,8 @@ hop_length = hparams.hparams.hop_size
 def tts(model, text, p=0, speaker_id=None, fast=True, figures=True):
   from synthesis import tts as _tts
   waveform, alignment, spectrogram, mel = _tts(model, text, p, speaker_id, fast)
-  if figures:
-      visualize(alignment, spectrogram)
+#   if figures:
+    #   visualize(alignment, spectrogram)
   IPython.display.display(Audio(waveform, rate=fs))
   
 # def visualize(alignment, spectrogram):
@@ -53,5 +53,5 @@ from train import restore_parts, load_checkpoint
 model = build_model()
 model = load_checkpoint(checkpoint_path, model, None, True)
 
-# print(idx, text)
-# tts(model, text, figures=False
+print(idx, "test test test")
+tts(model, "test test test", figures=False
