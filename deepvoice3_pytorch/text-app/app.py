@@ -3,6 +3,14 @@ import hparams
 import json
 import synthesis
 import train
+import torch
+import numpy as np
+import librosa
+import librosa.display
+import IPython
+from IPython.display import Audio
+# need this for English text processing frontend
+import nltk
 from os.path import exists, join, expanduser
 from deepvoice3_pytorch import frontend
 
@@ -53,5 +61,5 @@ from train import restore_parts, load_checkpoint
 model = build_model()
 model = load_checkpoint(checkpoint_path, model, None, True)
 
-print(idx, "test test test")
-tts(model, "test test test", figures=False
+# print(idx, "test test test")
+tts(model, "test test test", figures=False)
